@@ -41,7 +41,7 @@ p[data="data-2"]{
     background-color: blue;
 }
 
-/* 모든 요소(*) 중 name 속성 값이 "name-1"인 요소 글자 크기 20px */
+/* 모든 요소(*) 중 name 속성 값이 "name-1"인 요소 글자 크기 30px */
 /* == div1, div2, p2, p3 선택 */
 /* *[name="name-1"]{
     font-size: 30px;
