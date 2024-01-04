@@ -1,0 +1,78 @@
+/* -------------- 일반 구조 선택자 ------------*/
+
+/* A:first-child  */
+/* A:first-child -> 형제들 중 첫번째가 A가 맞다면 선택 */
+#test1 > pre:first-child{
+    background-color: red;
+    color: white;
+    /* 형제들 중 pre태그는 첫째가 아니라 선택 안됨 */
+}
+
+/* A:last-child  */
+/* A:last-child -> 형제들 중 마지막 A가 맞다면 선택 */
+#test1 > p:last-child{
+    background-color: blue;
+    color: white;
+} /* 마지막이 pre태그라 선택이 안됨 */
+
+
+/* A:nth-child(숫자 또는 수열)  */
+/* 형제들 중 n번째가 A가 맞다면 선택 */
+#test1 > p:nth-child(3){
+    background-color: yellow;
+} 
+
+/* 홀수번째가 p태그인 경우 선택 */
+#test1 > p:nth-child(2n-1){
+    text-decoration: line-through;
+}
+/* 짝수번째가 p태그인 경우 선택 */
+#test1 > p:nth-child(2n){
+    font-family: '궁서체';
+    font-weight: bold;
+    font-size: 30px;
+
+    /* pre태그는 선택 안됨 */
+}
+
+/* A:nth-last-child(숫자 또는 수열) */
+/* 형제들 중 뒤에서부터 n번째가 A가 맞다면 */
+#test1>p:nth-last-child(4){
+    border: 5px dotted black;
+}
+
+/* -------- 형태 구조 선택자 -------*/
+
+/* A:first-of-type */
+/* 선택된 A 요소들 중 첫번째 */
+#test2 > p:first-of-type{
+    background-color: tomato;
+}
+
+/* A:last-of-type */
+/* 선택된 A 요소들 중 마지막 */
+#test2 > p:last-of-type{
+    background-color: cyan;
+}
+
+/* A:nth-of-type(숫자 또는 수열) */
+/* 선택된 A 요소들 중 n번째 선택 */
+#test2 > pre:nth-of-type(2){
+    background-color: lightcoral;
+}
+
+#test2 > p:nth-of-type(2n){
+    background: lightblue;
+}
+
+/* A:nth-last-of-type(숫자 또는 수열) */
+/* 선택된 A 요소들 중 뒤에서 n번째 선택 */
+#test2 > p:nth-last-of-type(2):hover+p{
+    color: red;
+}
+
+/* 부정 선택자 */
+
+#test3 > li:not(:nth-of-type(3n)){
+    background-color: pink;
+  }
