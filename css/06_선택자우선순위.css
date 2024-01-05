@@ -1,0 +1,27 @@
+/* 3순위: 아이디 선택자 */
+#test1{
+    color: wheat; /* 안 겹치면 모두 누적 */
+    height: 100px;
+    background-color: black;
+}
+
+
+/* 4순위: 클래스 선택자 */
+.cls1{
+                      /* !important 1순위 */
+    background-color: green !important;
+}
+
+/* 5순위: 태그 선택자 */
+div{
+    width: 200px;
+    height: 200px;
+		/*둘다 !important -> 클래스와 태그의 우선순위를 비교하게 됨 */
+    background-color: red !important;
+}
+
+.cls1{
+	/* 둘다 클래스 -> 위치를 봄 */
+	background-color: blue !important;
+}
+

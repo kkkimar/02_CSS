@@ -1,0 +1,155 @@
+/* 클래스 기반 CSS(스타일) */
+
+.area1{background-color: red;}
+.area2{background-color: orange;}
+.area3{background-color: yellow;}
+.area4{background-color: green;}
+.area5{background-color: blue;}
+
+.block{
+    border: 1px solid black;
+    width: 150px;
+    height: 150px;
+    color: white;
+    display: block;
+}
+
+.inline{display: inline;}
+
+.inline-block{display: inline-block;}
+
+.none{display: none;}
+
+/* visibility 속성: 요소를 보이게/투명하게 만드는 속성
+-> 투명하게 만들어도 요소 크기만큼의 공간은 계속 차지하고 있음
+*/
+/* visibility hidden과 display:none 차이점
+-> 공간을 차지하냐 안하나의 차이!
+*/
+.hidden{visibility: hidden;}
+
+/* ---------------------------------------------------- */
+
+/* 상하 2분할 */
+
+/* 감싸는 요소 */
+.container{
+  border: 3px solid black;
+	width: 471px;
+	height: 471px;
+}
+
+/* 내부 영역 분할 요소(자식) */
+#test1 > div{
+	width: 100%;
+	height: 50%;
+}
+
+#test1 > div:first-child{
+	background-color: lemonchiffon;
+}
+#test1 > div:last-child{
+	background-color: lightblue;
+}
+
+/* .container>div:nth-of-type(1){
+	width: 100%;
+	height: 20%;
+	background-color: red;
+}
+.container>div:nth-of-type(2){
+	width: 100%;
+	height: 30%;
+	background-color: yellow;
+}
+.container>div:nth-of-type(3){
+	width: 100%;
+	height: 50%;
+	background-color: green;
+} */
+
+#test2> div{
+	/* width: 100%; */
+	/* block은 한줄을 100% 차지하기때문에 
+		width 100% 생략해도 됨
+	*/
+}
+#test2>div:nth-child(1){
+	height: 20%;
+	background-color: red;
+}
+#test2>div:nth-child(2){
+	height: 30%;
+	background-color: yellow;
+}
+#test2>div:nth-child(3){
+	height: 50%;
+	background-color: green;
+}
+
+/* 상하 2분할 -방법2 */
+/* 재사용과 유지보수에 적합 */
+.bg-red{background-color: red;}
+.bg-yellow{background-color: yellow;}
+.bg-green{background-color: green;}
+
+.h-20{height: 20%;}
+.h-30{height: 30%;}
+.h-50{height: 50%;}
+
+/* 좌우 2분할 */
+
+#test4 >div{
+	display: inline-block; 
+	width: 50%;
+	height: 100%;
+}
+#test4 >div:first-child{
+	background-color: red;
+}
+#test4 >div:last-child{
+	background-color: blue;
+}
+
+/* 밭전 만들기(상하 좌우 2분할) */
+#test99>div{
+	width: 100%;
+	height: 50%;
+}
+#test99>div>div{
+	display: inline-block;
+	width: 50%;
+	height: 100%;
+}
+#test99>div:first-child>div:first-child{
+	background-color: blue;
+}
+#test99>div:first-child>div:last-child{
+	background-color: red;
+}
+#test99>div:last-child>div:first-child{
+	background-color: yellow;
+}
+#test99>div:last-child>div:last-child{
+	background-color: violet;
+}
+
+/* 田 만들기(상하, 좌우 2분할) - 방법2  */
+#test5{
+	/* inline, inline-blco, 글들 사이의 높이 간격 0 */
+	line-height: 0;
+}
+
+#test5 > div{
+	width: 50%;
+	height: 50%;
+	display: inline-block;
+}
+
+#test5 > div:nth-child(1){background-color: pink;}
+#test5 > div:nth-child(2){background-color: limegreen;}
+#test5 > div:nth-child(3){background-color: orangered;}
+#test5 > div:nth-child(4){background-color: tomato;}
+
+
+
