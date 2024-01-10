@@ -1,0 +1,241 @@
+:root{
+  --main-color :lightgray; 
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+  color: black;
+  text-decoration: none;
+}
+ul{
+  list-style: none;
+}
+body{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header{
+  height: 100px;
+  margin-top: 50px;
+}
+
+.header-top-container{
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 0 20px;
+  font-weight: bold;
+  font-size: 0.8em;
+  display: flex;
+  justify-content: space-between;
+  background-color: whitesmoke;
+}
+
+.header-top-right{
+  display: flex;
+  align-items: center;
+}
+.header-top-right >a{
+  color: var(--main-color);
+}
+
+.header-top-left{
+  display: flex;
+  align-items: center;
+}
+.header-top-left a{
+  padding: 10px;
+  color: var(--main-color);
+}
+
+.header-container{
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo > a{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.search {
+  width: 40%;
+  height: 70%;
+  margin-left: 20px;
+}
+
+.search input {
+  width: 100%;
+  height: 100%;
+  border: 3px solid limegreen;
+  outline: none;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 5px;
+}
+
+nav{
+  width: 100%;
+  height: 60px;
+  margin-top: 20px;
+  /* border-bottom: 1px solid black ; */
+  box-shadow: 0px 3px 15px lightgray;
+}
+
+.navbar{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.navbar li {
+  width: 20%;
+  text-align: center;
+}
+
+.navbar li a{
+  width: 100%;
+}
+
+.album-intro{
+  display: flex;
+  flex-direction: column;
+}
+
+/* 앨범 소개  */
+
+.card-container{
+  width: 70%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+
+.card-item{
+  width: 20%;
+  padding-top: 20px;
+  font-size: 0.9em;
+}
+
+.card-item:hover .card-thumbnail-container{
+  transform: scale(1.1);
+}
+
+.card-thumbnail-container{
+  height: 200px;
+  transition-duration: 0.2s;
+}
+
+.card-thumbnail-container img{
+  width: 100%;
+  height: 80%;
+  object-fit: contain;
+}
+
+.card>p{
+  text-align: center;
+  font-weight: bold;
+  color: gray; 
+  margin-top: -10px;
+}
+
+/* artist contents */
+
+.artist_contents{
+  margin-top: 100px;
+}
+
+.artist_contents>p{
+  font-weight: bold;
+  color: darkgray;
+  margin: 10px 50px;
+}
+
+.artist-contents-container{
+  display: flex;
+  margin-top: 40px;
+}
+
+.artist-contents-small{
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.art-content{
+ width: 30%;
+}
+
+.art-content > img{
+  width: 100%;
+  margin: 10px 0;
+}
+
+.artist-contents-big{
+  width: 30%;
+  background-image: url(images/blog.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 10px;
+}
+
+footer{
+  margin-top: 100px;
+  border-top: 1px solid darkgray;
+}
+
+.footer-top > ul{
+  display: flex;
+  justify-content: end;
+}
+
+.footer-top > ul > li{
+  margin: 10px;
+  font-size: 0.8em;
+}
+
+.footer-top a{
+  color: gray;
+
+}
+
+.footer-mid > ul {
+  display: flex;
+}
+
+.footer-mid > ul > li{
+  margin: 10px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.footer-bottom{
+  margin-top: 10px;
+}
+
+.footer-bottom-container{
+  text-align: center;
+  padding: 20px;
+}
+
+.footer-bottom-container p{
+  color: darkgray;
+  font-size: 0.8em;
+}
+
